@@ -1,11 +1,8 @@
 #!/usr/bin/python3
 """BaseModel class and it's files"""
-
 from datetime import datetime
 from uuid import uuid4
 import models
-
-
 
 class BaseModel:
     """BaseModel class that defines all common attributes/methods"""
@@ -24,7 +21,7 @@ class BaseModel:
                     val = datetime.fromisoformat(val)
                 self.__setattr__(key, val)
         else:
-            self.id = str(uuid.uuid4())
+            self.id = str(uuid4())
             self.created_at = datetime.utcnow()
             self.updated_at = self.created_at
 
