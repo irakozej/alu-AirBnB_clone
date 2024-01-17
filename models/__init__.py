@@ -1,8 +1,11 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
+"""
+Initializes Module Global Variables (Singleton)
+"""
 
-from models.engine.file_storage import FileStorage
-from models.base_model import BaseModel
+from .engine.file_storage import FileStorage
+
 
 storage = FileStorage()
 storage.reload()
